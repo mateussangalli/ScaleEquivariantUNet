@@ -24,12 +24,14 @@ parser.add_argument('--weight_decay', type=float, help='weight decay', default=0
 parser.add_argument('--dropout', type=float, default=.25)
 parser.add_argument('--scale_aug', type=bool, default=False)
 parser.add_argument('--scale_aug_range', type=float, default=2.)
+parser.add_argument('--epochs', type=int, default=300)
+
 args = parser.parse_args()
 
 saved_models_dir = 'saved_models'
 IMG_SIZE = (224, 224)
 CROP_SIZE = (112, 112)
-EPOCHS = 300
+EPOCHS =  args.epochs
 BATCH_SIZE = 8
 
 
