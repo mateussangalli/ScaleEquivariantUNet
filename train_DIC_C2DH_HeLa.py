@@ -25,6 +25,7 @@ parser.add_argument('--id', type=int, default=0)
 parser.add_argument('--scale_aug', type=bool, default=False)
 parser.add_argument('--scale_aug_range', type=float, default=2.)
 parser.add_argument('--datadir', type=str, default='./')
+parser.add_argument('--epochs', type=int, default=200)
 args = parser.parse_args()
 
 saved_models_dir = 'saved_models'
@@ -32,7 +33,7 @@ datadir = args.data_dir
 
 BATCH_SIZE = 1
 VAL_FREQ = 5
-MAX_EPOCHS = 200
+MAX_EPOCHS = args.epochs
 N_CLASSES = 2
 
 
