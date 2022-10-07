@@ -154,4 +154,4 @@ for i in range(args.start, args.end):
     if args.scale_aug:
         scale_aug_str += f'aug{int(args.scale_aug_range * 10)}'
     model.save(os.path.join(saved_models_dir,
-                            f'{model_name}_rep{i}'))
+                            f'{model_name+scale_aug_str}_rep{i}'))
